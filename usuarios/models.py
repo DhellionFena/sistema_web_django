@@ -11,3 +11,6 @@ class User(models.Model):
     def get_idade(self):
         dias = datetime.datetime.now() - datetime.datetime(self.data_nascimento.year, self.data_nascimento.month, self.data_nascimento.day)
         return int(dias.days / 365)
+
+    def __str__(self):
+        return f"{self.nome.capitalize()} {self.sobrenome.capitalize()}"
