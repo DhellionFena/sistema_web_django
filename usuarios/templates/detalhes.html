@@ -1,0 +1,15 @@
+{% extends "estrutura_geral.html" %}
+
+{% block titulo %}
+    Detalhes sobre {{usuario.nome}}
+{% endblock titulo %}
+
+{% block conteudo %}
+    <h1> {{ usuario.nome }} {{ usuario.sobrenome }} </h1>
+    <p>Idade: {{ idade }} anos ({{usuario.data_nascimento}})</p>
+    <p>Telefone: {{usuario.telefone}}</p>
+    <p>Email: {{ usuario.email }}</p>
+
+    <p>Voltar para <a href="/users">Usuários</a></p>
+{% endblock conteudo %}
+

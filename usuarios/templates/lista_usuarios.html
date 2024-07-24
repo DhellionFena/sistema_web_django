@@ -1,0 +1,17 @@
+{% extends "estrutura_geral.html" %}
+
+{% block titulo %}
+Lista de Usuários Cadastrados
+{% endblock titulo %}
+
+{% block conteudo %}
+<h1>Página de Usuários</h1>
+<p>Seja bem-vindo ao meu primeiro projeto Django! Segue a lista dos usuários registrados no sistema:</p>
+<ul>
+    {% for user in usuarios %}
+    <li><a href="detalhes/{{ user.id }}">{{ user.nome }} {{ user.sobrenome }}</a></li>
+    {% endfor %}
+</ul>
+
+<p>Voltar para <a href="/">Página Inicial</a></p>
+{% endblock conteudo %}
